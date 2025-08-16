@@ -1,8 +1,8 @@
 from typing import Optional
 from messages.protocol import Message
 from agents.user_input_agent import get_inputs
-from agents.resume_extractor import handle_message as resume_handler
-from agents.jd_extractor import handle_message as jd_handler
+from agents.resume_parser_agent import handle_message as resume_handler
+from agents.jd_parser_agent import handle_message as jd_handler
 from agents.scoring_agent import handle_message as scoring_handler
 from agents.improvement_agent import handle_message as improvement_handler
 
@@ -24,10 +24,10 @@ def route(message: Message) -> Optional[Message]:
     return None
 
 def main():
-    msg: Optional[Message] = get_inputs()
-    while msg:
-        print("Routing:", msg)
-        msg = route(msg)
+    message = get_inputs()
+    while message:
+        print("Routing:", message)
+        message = route(message)
 
 if __name__ == "__main__":
     main()
