@@ -1,12 +1,23 @@
-Resume Analyzer + Job Description Matcher
+# Resume Advisor (Multi-Agent RAG Project)
 
-Use Case: Compare your resume to job descriptions and get suggestions for improvement.
-Agents:
-    Resume Extractor Agent
-    Job Spec Extractor Agent
-    Scoring Agent: Uses vector similarity or rule-based logic
-    Improvement Advisor Agent: Suggests new skills to include based on gaps
+This is a beginner-friendly AI agents project using a custom message-passing protocol (ACP style).
 
-Modalities:
-    Text
-    Vector similarity (embeddings)
+## What It Does
+
+- Takes a resume and job description
+- Parses and compares them using embeddings
+- Gives a match score
+- Suggests improvements
+
+## Agents
+
+- User Input Agent
+- Resume Extractor Agent
+- JD Extractor Agent
+- Scoring Agent
+- Improvement Advisor Agent
+
+## Requirements
+
+```bash
+pip install PyPDF2 sentence-transformers numpy
